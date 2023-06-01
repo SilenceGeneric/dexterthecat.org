@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Meme Scraper</title>
+<style>
+body {
+  background-color: #212121;
+  color: #E8EAE9;
+}
+
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+li {
+  display: inline-block;
+  width: 200px;
+  margin: 10px;
+}
+
+img {
+  width: 100%;
+}
+
+a {
+  color: #E8EAE9;
+}
+
+a:hover {
+  color: #ffffff;
+}
+</style>
+</head>
+<body>
+<ul>
+{% for image_url in image_urls %}
+<li><a href="{{ image_url }}"><img src="{{ image_url }}"></a></li>
+{% endfor %}
+</ul>
+</body>
+</html>
